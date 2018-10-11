@@ -1,0 +1,88 @@
+\documentclass[12pt,a4paper,twoside,openright]{report}
+\usepackage[utf8]{inputenc}
+\usepackage[inner=3.5cm,outer=2.5cm,bottom=3cm,top=2.5cm,pdftex]{geometry}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{rotating}
+\usepackage[page]{appendix}
+\usepackage{float}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{subfigure}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{textcomp}
+\usepackage{fancyhdr}
+\usepackage{multirow}
+\usepackage{verbatim}	%makes it possible to comment out a section of text by using \begin{comment}...\end{comment}
+
+
+\usepackage[norsk]{babel}
+
+\setlength{\headheight}{15pt}
+% Fix for twoside vertical stretch problem
+% See http://www.latex-community.org/viewtopic.php?t=1547
+\raggedbottom
+
+%\loadglsentries{glossary/glos}
+% Style our chapter headings.
+\titlespacing{\chapter}{0pt}{0pt}{40pt}
+\titleformat{\chapter}[display]
+ {\bfseries\Large}
+ {\filleft\MakeUppercase{\chaptertitlename} \Huge\thechapter}
+ {4ex}
+ {\titlerule
+  \vspace{2ex}%
+  \filright}
+ [\vspace{2ex}%
+ \titlerule]
+
+%make glossary
+\makeglossary
+
+% compile report.tex, run the cmd below, compile again. 
+% makeindex report.glo -s report.ist -t report.glg -o report.gls
+
+%\vrefwarning
+
+\begin{document}
+%Abstract
+\pagestyle{empty}
+\vfill
+\vfill
+\indent \newline
+\Huge Executive Summary \\
+\normalsize 
+\indent \newline
+Her kommer det et sammendrag av rapporten/oppgaven \\
+\vfill
+\cleardoublepage
+
+\pagestyle{fancy}
+\pagenumbering{roman}
+
+\setcounter{tocdepth}{2}
+\tableofcontents
+\addtocontents{toc}{~\hfill\textbf{Side}\par}
+
+% ----------- CHAPTERS ----------------
+
+% Parts
+\cleardoublepage
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\chapter{Bedriften AS ROCKWOOL}
+\input{kapittel/bedriftenAsRockwool}
+\cleardoublepage
+
+\chapter{Min Prosess}
+\input{kapittel/minProsess}
+\cleardoublepage
+
+\renewcommand\bibname{Referanseliste}
+\bibliographystyle{plain}	% (uses file "plain.bst")
+\bibliography{myrefs}		% expects file "myrefs.bib"
+\cleardoublepage
+
+\end{document}
