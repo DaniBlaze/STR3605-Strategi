@@ -1,4 +1,4 @@
-# STR3605-Strategi-DANIEL BERG
+# STR3605-Strategi
 BI strategi prosjekt 2018
 
 ### Prerequisites
