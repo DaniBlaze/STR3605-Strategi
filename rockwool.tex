@@ -38,18 +38,10 @@
 
 \setstretch{1.25}
 \begin{document}
-%Abstract
-\pagestyle{empty}
-\pagenumbering{roman}
-\vfill
-\vfill
-\indent \newline
-\Huge Executive Summary \\
-\normalsize 
-\input{kapittel/executiveSummary}
-\vfill
 
 \pagestyle{fancy}
+
+% empty default settings for fancy layout
 \fancyhf{}
 
 % table mark commands
@@ -73,6 +65,12 @@
   \renewcommand{\footrulewidth}{0.5pt}% Line at the footer visible
   \fancyfoot[C]{\textcolor{black} {\thepage}}
 }
+
+\pagenumbering{roman}
+\chapter*{Executive Summary}
+\input{kapittel/executiveSummary}
+
+
 \setcounter{tocdepth}{2}
 \tableofcontents
 \addtocontents{toc}{~\hfill\textbf{Side}\par}
