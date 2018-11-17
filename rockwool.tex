@@ -3,7 +3,6 @@
 \usepackage[inner=3.5cm,outer=2.5cm,bottom=3cm,top=2.5cm,pdftex]{geometry}
 \usepackage{setspace}
 \usepackage{graphicx}
-\usepackage{tabularx}
 \usepackage{rotating}
 \usepackage[page]{appendix}
 \usepackage{float}
@@ -16,7 +15,8 @@
 \usepackage{fancyhdr}
 \usepackage{multirow}
 \usepackage{verbatim}	%makes it possible to comment out a section of text by using \begin{comment}...\end{comment}
-\usepackage{xcolor}
+\usepackage[table,xcdraw]{xcolor}
+\usepackage{pifont}
 \usepackage[norsk]{babel}
 
 \definecolor{rockwoolcolor}{RGB}{155,0,0}
@@ -40,19 +40,23 @@
 \begin{document}
 %Abstract
 \pagestyle{empty}
+\pagenumbering{roman}
 \vfill
 \vfill
 \indent \newline
 \Huge Executive Summary \\
 \normalsize 
-\indent \newline
-Her kommer det et sammendrag av rapporten/oppgaven
+\input{kapittel/executiveSummary}
 \vfill
 
-\pagenumbering{roman}
 \pagestyle{fancy}
 \fancyhf{}
 
+% table mark commands
+\newcommand{\cmark}{\textcolor{green!80!black}{\ding{51}}}
+\newcommand{\xmark}{\textcolor{red}{\ding{55}}}
+
+% chapter, section, header and footer layout
 \renewcommand{\sectionmark}[1]{\markright{\thesection ~ \ #1}}
 \renewcommand{\chaptermark}[1]{\markboth{ #1}{}}
 \renewcommand{\headrulewidth}{0.5pt}
