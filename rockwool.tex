@@ -17,11 +17,11 @@
 \usepackage{verbatim}	%makes it possible to comment out a section of text by using \begin{comment}...\end{comment}
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{pifont}
+\usepackage{mathptmx}
 \usepackage[norsk]{babel}
 
 \definecolor{rockwoolcolor}{RGB}{155,0,0}
 
-%\loadglsentries{glossary/glos}
 % Style chapter headings.
 \setlength{\headheight}{15pt}
 \titlespacing*{\chapter}{0pt}{0pt}{4ex}
@@ -31,9 +31,6 @@
  {0pt}
  {\color{rockwoolcolor}\titlerule[2.0pt]\vspace{2ex}\filright\color{black}}
  [\color{rockwoolcolor}\vspace{2ex}{\titlerule[2.0pt]}]
-
-%make glossary
-\makeglossary
 
 
 \setstretch{1.25}
@@ -83,14 +80,14 @@
 \chapter{Bedriften AS ROCKWOOL}
 \input{kapittel/bedriftenAsRockwool}
 
-\chapter{Intern Analyse}
+\chapter{Intern analyse}
 \input{kapittel/internAnalyse}
 
-\chapter{Ekstern Analyse}
+\chapter{Ekstern analyse}
 \input{kapittel/eksternAnalyse}
 
 \renewcommand\bibname{Referanseliste}
-\bibliographystyle{plain}	% (uses file "plain.bst")
-\bibliography{myrefs}		% expects file "myrefs.bib"
+\bibliographystyle{apalike}	% (uses file "plain.bst")
+\bibliography{mineReferanser}		% expects file "mineReferanser.bib"
 
 \end{document}
