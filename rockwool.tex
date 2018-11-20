@@ -19,6 +19,7 @@
 \usepackage{pifont}
 \usepackage{mathptmx}
 \usepackage{wrapfig}
+\usepackage{ragged2e}
 \usepackage[norsk]{babel}
 
 \definecolor{rockwoolcolor}{RGB}{155,0,0}
@@ -105,7 +106,9 @@
 \input{kapittel/anbefaltStrategi}
 
 \renewcommand\bibname{Referanseliste}
+{\RaggedRight
 \bibliographystyle{apalike}	% (uses file "plain.bst")
 \bibliography{mineReferanser}		% expects file "mineReferanser.bib"
+}
 
 \end{document}
