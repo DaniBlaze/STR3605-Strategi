@@ -9,7 +9,7 @@
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage{subfigure}
 \usepackage{titlesec}
-\usepackage{hyperref}
+\usepackage[hidelinks]{hyperref}
 \usepackage{listings}
 \usepackage{textcomp}
 \usepackage{fancyhdr}
@@ -37,7 +37,7 @@
 
 \setstretch{1.25}
 \begin{document}
-
+{\RaggedRight
 \pagestyle{fancy}
 
 % empty default settings for fancy layout
@@ -68,10 +68,10 @@
 }
 
 % Avoid hyphenating
-%\tolerance=1
-%\emergencystretch=\maxdimen
-%\hyphenpenalty=10000
-%\hbadness=10000
+\tolerance=10
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
 
 \pagenumbering{roman}
 \chapter*{Executive Summary}
@@ -85,6 +85,7 @@
 % ----------- CHAPTERS ----------------
 
 % Parts
+\cleardoublepage
 \pagenumbering{arabic}
 \setcounter{page}{1}
 \chapter{Bedriften AS ROCKWOOL}
@@ -106,7 +107,6 @@
 \input{kapittel/anbefaltStrategi}
 
 \renewcommand\bibname{Referanseliste}
-{\RaggedRight
 \bibliographystyle{apalike}	% (uses file "plain.bst")
 \bibliography{mineReferanser}		% expects file "mineReferanser.bib"
 }
